@@ -19,6 +19,9 @@ elOperators.forEach(button => {
 
 elButtons.forEach(button => {
   button.addEventListener("click", (e) => {
+    if (elResultText.textContent == "0") {
+      elResultText.textContent = ""
+    }
     elTarget = e.target.innerText
     if (elTarget !== "=") {
       elResultText.textContent += elTarget
