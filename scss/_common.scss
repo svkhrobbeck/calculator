@@ -1,7 +1,7 @@
 /* CUSTOM PROPS */
 :root {
   --primary-bg-color: #fff;
-  --text-color: #000;
+  --text-color: #fff;
 }
 
 /* GLOBAL */
@@ -37,9 +37,10 @@ img {
 
 body {
   height: 100%;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
+  font-family: "Work Sans", "Arial", sans-serif;
+  font-size: 24px;
   line-height: 1.5;
+  font-weight: 300;
   color: var(--text-color);
   background-color: var(--primary-bg-color);
   display: flex;
@@ -88,6 +89,9 @@ body {
 /* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* BUTTON */
