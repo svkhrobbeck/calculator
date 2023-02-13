@@ -13,8 +13,8 @@ let total = null;
 // Clear logic
 elClearBtn.addEventListener("click", () => {
   elDisplayText.textContent = 0;
-  let firstOperand = "";
-  let secondOperand = "";
+  firstOperand = "";
+  secondOperand = "";
   total = "";
 });
 
