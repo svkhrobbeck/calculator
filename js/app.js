@@ -56,7 +56,10 @@ elOperandBtns.forEach((btn) => {
 });
 
 // Calc logic
-elCalcBtn.addEventListener("click", (evt) => {
+elCalcBtn.addEventListener("click", calcFunc);
+
+// Calc function
+function calcFunc() {
   if (operator === "/") {
     total = +firstOperand / +secondOperand;
   } else if (operator === "×") {
@@ -67,7 +70,9 @@ elCalcBtn.addEventListener("click", (evt) => {
     total = +firstOperand + +secondOperand;
   }
 
+  total = total.toFixed(3);
+
   elDisplayText.textContent = +total;
   firstOperand = +total;
   secondOperand = "";
-});
+}
