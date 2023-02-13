@@ -69,10 +69,18 @@ function calcFunc() {
   } else if (operator === "+") {
     total = +firstOperand + +secondOperand;
   }
-
+  
   total = total.toFixed(3);
+  
+  if (total < 0) {
+   const elAlertText = document.querySelector("[data-alert-text]")
+   elAlertText.classList.remove("hidden")
+   elDisplayText.textContent = +total;
+  return
+  }
 
   elDisplayText.textContent = +total;
   firstOperand = +total;
   secondOperand = "";
+
 }
