@@ -123,7 +123,7 @@ body {
   .alert-text-wrapper {
     position: static;
     max-width: 300px;
-    margin-bottom: 70px;
+    margin-top: 70px;
   }
 }
 
@@ -146,10 +146,9 @@ body {
 @media only screen and (max-width: 992px) {
   .alert-text::before {
     border-right-color: transparent;
-    border-top-color: #9e9494;
+    border-bottom-color: #9e9494;
     left: calc(50% - 30px);
-    top: auto;
-    bottom: -60px;
+    top: -60px;
   }
 }
 
