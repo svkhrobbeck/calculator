@@ -1,96 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
 
-  <!-- Favicon -->
-  <!-- <link rel="shortcut icon" href="images/"> -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-    <div class="calculator">
-      <div class="calculator__result-window">
-        <h2 class="calculator__result-value" data-result-text>0</h2>
+  <body>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="calculator">
+        <div class="calculator__result-window">
+          <h2 class="calculator__result-value" data-result-text>0</h2>
+        </div>
+        <ul class="calculator__button-list">
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-clear="C">
+              C
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button
+              class="calculator__button"
+              type="button"
+              data-not-operators="%"
+            >
+              %
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-dot=".">
+              .
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-operators="/">
+              /
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="9">
+              9
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="8">
+              8
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="7">
+              7
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-operators="*">
+              ×
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="6">
+              6
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="5">
+              5
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="4">
+              4
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-operators="-">
+              -
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="3">
+              3
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="2">
+              2
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="1">
+              1
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-operators="+">
+              +
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-button="0">
+              0
+            </button>
+          </li>
+          <li class="calculator__button-item">
+            <button class="calculator__button" type="button" data-calc="=">
+              =
+            </button>
+          </li>
+        </ul>
       </div>
-      <ul class="calculator__button-list">
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-clear="C">C</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-operators="%">%</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-dot=".">.</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-operators="/">/</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="9">9</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="8">8</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="7">7</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-operators="*">×</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="6">6</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="5">5</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="4">4</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-operators="-">-</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="3">3</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="2">2</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="1">1</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-operators="+">+</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-button="0">0</button>
-        </li>
-        <li class="calculator__button-item">
-          <button class="calculator__button" type="button" data-calc="=">=</button>
-        </li>
-      </ul>
-    </div>
-  </main>
-  <!-- /MAIN CONTENT -->
+    </main>
+    <!-- /MAIN CONTENT -->
 
-  <!-- SCRIPTS -->
-  <script src="js/app.js"></script>
-
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
