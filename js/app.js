@@ -1,52 +1,73 @@
-const elResultText = document.querySelector("[data-result-text]")
-const elButtons = document.querySelectorAll("[data-button]")
-const elOperators = document.querySelectorAll("[data-operator]")
-const elClearBtn = document.querySelectorAll("[data-clear]")
-const elCalcBtn = document.querySelector("[data-calc]")
+const elDisplayText = document.querySelector("[data-result-text]");
+const elClearBtn = document.querySelector("[data-clear]");
+const elDotBtn = document.querySelector("[data-dot]");
+const elOperatorBtns = document.querySelectorAll("[data-operators]");
+const elOperandBtns = document.querySelectorAll("[data-button]");
+const elCalcBtn = document.querySelector("[data-calc]");
 
-let firstOperand = ""
-let operator = null
-let secondOperand = ""
+let firstOperand = "";
+let secondOperand = "";
+let operator = null;
+let total = null;
 
-elOperators.forEach(button => {
-  button.addEventListener("click", (e) => {
-    let elTarget = e.target.innerText
-    if (elResultText.textContent.includes(elTarget)) return
-    elResultText.textContent += elTarget
-    operator = elTarget
-  })
-})
+// Clear logic
+elClearBtn.addEventListener("click", () => {
+  elDisplayText.textContent = 0;
+  let firstOperand = "";
+  let secondOperand = "";
+  total = "";
+});
 
-elButtons.forEach(button => {
-  button.addEventListener("click", (e) => {
-    if (elResultText.textContent == "0") {
-      elResultText.textContent = ""
-    }
-    elTarget = e.target.innerText
-    if (elTarget !== "=") {
-      elResultText.textContent += elTarget
-    }
-    if (elResultText.textContent.includes(operator)) {
-      secondOperand += elTarget
-      console.log(secondOperand)
-    }
-    if (!elResultText.textContent.includes(operator)) {
-      firstOperand += elTarget
-      console.log(firstOperand)
-    }
-  })
-})
+// Operators
+elOperatorBtns.forEach((btn) => {
+  btn.addEventListener("click", (evt) => {
+    const elTarget = evt.target.innerText;
+    if (elDisplayText.textContent.includes(elTarget)) return;
+    if (
+      elDisplayText.textContent.includes("/") ||
+      elDisplayText.textContent.includes("×") ||
+      elDisplayText.textContent.includes("+") ||
+      elDisplayText.textContent.includes("-")
+    )
+      return;
 
-elCalcBtn.addEventListener("click", () => {
-  let total = null
-  if (operator === "×") {
-    total = +firstOperand * +secondOperand
-  } else if (operator === "/") {
-    total = +firstOperand / +secondOperand
+    operator = elTarget;
+    elDisplayText.textContent += elTarget;
+  });
+});
+
+// Operands
+elOperandBtns.forEach((btn) => {
+  btn.addEventListener("click", (evt) => {
+    const elTarget = evt.target.innerText;
+
+    if (elDisplayText.textContent == 0) {
+      elDisplayText.textContent = "";
+    }
+
+    elDisplayText.textContent += elTarget;
+
+    if (elDisplayText.textContent.includes(operator)) {
+      secondOperand += elTarget;
+    } else if (!elDisplayText.textContent.includes(operator)) {
+      firstOperand += elTarget;
+    }
+  });
+});
+
+// Calc logic
+elCalcBtn.addEventListener("click", (evt) => {
+  if (operator === "/") {
+    total = +firstOperand / +secondOperand;
+  } else if (operator === "×") {
+    total = +firstOperand * +secondOperand;
   } else if (operator === "-") {
-    total = +firstOperand - +secondOperand
+    total = +firstOperand - +secondOperand;
   } else if (operator === "+") {
-    total = +firstOperand + +secondOperand
+    total = +firstOperand + +secondOperand;
   }
-  elResultText.textContent = total
-})
+
+  elDisplayText.textContent = +total;
+  firstOperand = +total;
+  secondOperand = "";
+});

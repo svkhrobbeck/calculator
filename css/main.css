@@ -121,6 +121,11 @@ body {
   color: #fff;
   padding: 25px;
 }
+@media only screen and (max-width: 576px) {
+  .calculator {
+    width: 80%;
+  }
+}
 
 .calculator__result-window {
   display: flex;
@@ -152,6 +157,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 768px) {
+  .calculator__button-item {
+    width: 56px;
+    height: 60px;
+  }
+}
 
 .calculator__button {
   border: none;
@@ -173,4 +184,9 @@ body {
 }
 .calculator__button:active, .calculator__button:focus {
   background-color: #4B5EFC;
+}
+@media only screen and (max-width: 768px) {
+  .calculator__button {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=main.css.map */

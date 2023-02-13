@@ -6,6 +6,10 @@
   background-color: #17171C;
   color: #fff;
   padding: 25px;
+
+  @media only screen and (max-width: $mobile) {
+    width: 80%;
+  }
 }
 
 .calculator__result-window {
@@ -37,6 +41,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $tablet) {
+    width: 56px;
+    height: 60px;
+  }
 }
 
 .calculator__button {
@@ -61,5 +70,9 @@
   &:active,
   &:focus {
     background-color: #4B5EFC;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 24px;
   }
 }
