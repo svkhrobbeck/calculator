@@ -105,6 +105,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $mobile) {
+    padding-top: 50px;
+  }
 }
 
 /* BUTTON */
