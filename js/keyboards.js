@@ -53,8 +53,13 @@ document.addEventListener("keydown", (evt) => {
     }
   }
 
-  // Clear
+  // Erase
   if (evt.key === "Backspace") {
+    numErase();
+  }
+
+  // Clear
+  if (evt.key === "с") {
     elDisplayText.textContent = 0;
     firstOperand = "";
     secondOperand = "";

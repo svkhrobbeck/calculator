@@ -20,25 +20,7 @@ elClearBtn.addEventListener("click", () => {
 });
 
 // Erase logic
-elEraseBtn.addEventListener("click", () => {
-  if (elDisplayText.textContent.length <= 1) {
-    elDisplayText.textContent = "0";
-  } else {
-    elDisplayText.textContent = elDisplayText.textContent.replace(/.$/, "");
-  }
-
-  if (firstOperand.length <= 1) {
-    firstOperand = "";
-  } else {
-    firstOperand = firstOperand.replace(/.$/, "");
-  }
-
-  if (secondOperand.length <= 1) {
-    secondOperand = "";
-  } else {
-    secondOperand = secondOperand.replace(/.$/, "");
-  }
-});
+elEraseBtn.addEventListener("click", numErase);
 
 // Dot logic
 elDotBtn.addEventListener("click", (evt) => {
@@ -134,4 +116,27 @@ function calcFunc() {
   elDisplayText.textContent = +total;
   firstOperand = +total;
   secondOperand = "";
+}
+
+// Erase function
+function numErase() {
+  if (elDisplayText.textContent.length <= 1) {
+    elDisplayText.textContent = "0";
+  } else {
+    elDisplayText.textContent = elDisplayText.textContent.replace(/.$/, "");
+  }
+
+  if (!elDisplayText.textContent.includes(operator)) {
+    if (firstOperand.length <= 1) {
+      firstOperand = "";
+    } else {
+      firstOperand = firstOperand.replace(/.$/, "");
+    }
+  } else {
+    if (secondOperand.length <= 1) {
+      secondOperand = "";
+    } else {
+      secondOperand = secondOperand.replace(/.$/, "");
+    }
+  }
 }
