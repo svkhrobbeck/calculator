@@ -2,7 +2,7 @@
   position: fixed;
   top: 10px;
   left: calc(50% - 17px);
-  transition: top .5s ease, left .5s ease;
+  transition: top 0.5s ease, left 0.5s ease;
 }
 
 .theme__toggler {
@@ -12,18 +12,18 @@
   padding: 5px;
   border: none;
   border-radius: 50%;
-  transition: background-color .5s ease, color .5s ease;
-  
+  transition: background-color 0.5s ease, color 0.5s ease;
+
   svg {
     &:first-child {
       display: none;
     }
-    
+
     &:last-child {
       display: inline-block;
     }
   }
-  
+
   &.dark {
     --outline-color: #000;
     svg {
