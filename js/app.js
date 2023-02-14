@@ -22,16 +22,23 @@ elClearBtn.addEventListener("click", () => {
 elDotBtn.addEventListener("click", (evt) => {
   const elTarget = elDotBtn.dataset.dot;
 
-  if (elDisplayText.textContent.includes(".")) {
-    return;
-  } else {
-    if (elDisplayText.textContent.includes(operator)) {
-      secondOperand += elTarget;
-    } else if (!elDisplayText.textContent.includes(operator)) {
+  if (!elDisplayText.textContent.includes(operator)) {
+    if (!firstOperand.includes(elTarget)) {
       firstOperand += elTarget;
-    }
-    elDisplayText.textContent += elTarget;
+    } else return;
   }
+  if (elDisplayText.textContent.includes(operator)) {
+    if (!secondOperand.includes(elTarget)) {
+      if (secondOperand === "") {
+        elDisplayText.textContent += "0";
+        secondOperand += 0 + elTarget;
+      } else {
+        secondOperand += elTarget;
+      }
+    } else return;
+  }
+
+  elDisplayText.textContent += elTarget;
 });
 
 // Operators
@@ -57,7 +64,10 @@ elOperandBtns.forEach((btn) => {
   btn.addEventListener("click", (evt) => {
     const elTarget = evt.target.innerText;
 
-    if (elDisplayText.textContent == 0) {
+    if (
+      elDisplayText.textContent == 0 &&
+      !elDisplayText.textContent.includes(".")
+    ) {
       elDisplayText.textContent = "";
     }
 
