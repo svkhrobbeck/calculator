@@ -7,22 +7,25 @@
 
 .theme__toggler {
   --outline-color: #fff;
+  background-color: var(--element-bg);
   display: flex;
   padding: 5px;
   border: none;
   border-radius: 50%;
-
+  transition: background-color .5s ease, color .5s ease;
+  
   svg {
     &:first-child {
       display: none;
     }
-
+    
     &:last-child {
       display: inline-block;
     }
   }
-
+  
   &.dark {
+    --outline-color: #000;
     svg {
       &:first-child {
         display: inline-block;

@@ -186,16 +186,21 @@ body {
 
 .theme__toggler {
   --outline-color: #fff;
+  background-color: var(--element-bg);
   display: flex;
   padding: 5px;
   border: none;
   border-radius: 50%;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .theme__toggler svg:first-child {
   display: none;
 }
 .theme__toggler svg:last-child {
   display: inline-block;
+}
+.theme__toggler.dark {
+  --outline-color: #000;
 }
 .theme__toggler.dark svg:first-child {
   display: inline-block;
