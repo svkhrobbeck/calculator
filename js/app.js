@@ -114,7 +114,7 @@ function calcFunc() {
   }
 
   elDisplayText.textContent = +total;
-  firstOperand = +total;
+  firstOperand = String(total);
   secondOperand = "";
 }
 
@@ -130,14 +130,14 @@ function numErase() {
   if (!elDisplayText.textContent.includes(operator)) {
     if (firstOperand.length <= 1) {
       firstOperand = "";
-    } else {
-      firstOperand = firstOperand.replace(/.$/, "");
+      return;
     }
+    firstOperand = firstOperand.toString().replace(/.$/, "");
   } else {
     if (secondOperand.length <= 1) {
       secondOperand = "";
-    } else {
-      secondOperand = secondOperand.replace(/.$/, "");
+      return;
     }
+    secondOperand = secondOperand.replace(/.$/, "");
   }
 }
