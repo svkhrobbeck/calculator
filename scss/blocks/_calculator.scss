@@ -20,6 +20,15 @@
   background-color: var(--button-color);
   border-radius: 5px;
   padding-right: 2px;
+
+  
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 50px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }
 
 .calculator__result-value {

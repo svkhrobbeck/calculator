@@ -247,6 +247,16 @@ body {
   border-radius: 5px;
   padding-right: 2px;
 }
+@media only screen and (max-width: 768px) {
+  .calculator__result-window {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .calculator__result-window {
+    margin-bottom: 30px;
+  }
+}
 
 .calculator__result-value {
   font-weight: 400;
