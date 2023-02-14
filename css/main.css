@@ -249,12 +249,13 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .calculator__result-window {
-    margin-bottom: 50px;
+    margin-bottom: 65px;
   }
 }
 @media only screen and (max-width: 576px) {
   .calculator__result-window {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
+    padding: 3px 0;
   }
 }
 
