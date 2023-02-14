@@ -1,6 +1,7 @@
 const elDisplayText = document.querySelector("[data-result-text]");
 const elClearBtn = document.querySelector("[data-clear]");
 const elDotBtn = document.querySelector("[data-dot]");
+const elEraseBtn = document.querySelector("[data-erase-num]");
 const elOperatorBtns = document.querySelectorAll("[data-operators]");
 const elOperandBtns = document.querySelectorAll("[data-button]");
 const elCalcBtn = document.querySelector("[data-calc]");
@@ -16,6 +17,27 @@ elClearBtn.addEventListener("click", () => {
   firstOperand = "";
   secondOperand = "";
   total = "";
+});
+
+// Erase logic
+elEraseBtn.addEventListener("click", () => {
+  if (elDisplayText.textContent.length <= 1) {
+    elDisplayText.textContent = "0";
+  } else {
+    elDisplayText.textContent = elDisplayText.textContent.replace(/.$/, "");
+  }
+
+  if (firstOperand.length <= 1) {
+    firstOperand = "";
+  } else {
+    firstOperand = firstOperand.replace(/.$/, "");
+  }
+
+  if (secondOperand.length <= 1) {
+    secondOperand = "";
+  } else {
+    secondOperand = secondOperand.replace(/.$/, "");
+  }
 });
 
 // Dot logic
