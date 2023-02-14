@@ -53,6 +53,14 @@ document.addEventListener("keydown", (evt) => {
     }
   }
 
+  // Clear
+  if (evt.key === "Backspace") {
+    elDisplayText.textContent = 0;
+    firstOperand = "";
+    secondOperand = "";
+    total = "";
+  }
+
   // Calc
   if (evt.key === "Enter") {
     calcFunc();

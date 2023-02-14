@@ -3,7 +3,7 @@
   max-width: 450px;
   border-radius: 10px;
   width: 100%;
-  background-color: #17171c;
+  background-color: var(--element-bg);
   color: #fff;
   padding: 25px;
 
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 80px;
-  background-color: rgba(78, 80, 95, 0.4);
+  background-color: var(--button-color);
   border-radius: 5px;
   padding-right: 2px;
 }
@@ -68,7 +68,7 @@
 .calculator__button {
   border: none;
   cursor: pointer;
-  background-color: #2e2f38;
+  background-color: var(--button-color);
   font-size: 32px;
   color: var(--text-color);
   display: flex;
@@ -81,12 +81,12 @@
   transition: background-color 0.4s ease;
 
   &:hover {
-    background-color: #4e505f;
+    background-color: var(--hover-color);
   }
 
   &:active,
   &:focus {
-    background-color: #4b5efc;
+    background-color: var(--focus-color);
   }
 
   @media only screen and (max-width: $tablet) {

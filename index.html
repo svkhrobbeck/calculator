@@ -25,6 +25,48 @@
   <body>
     <!-- MAIN CONTENT -->
     <main class="main-content">
+      <!-- THEME -->
+      <div class="theme">
+        <button class="theme__toggler" data-theme-toggler>
+          <!-- sun -->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g opacity="0.7">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13 2V3V5V6H11V5V3V2H13ZM2 11H3H5H6V13H5H3H2V11ZM19 11H18V13H19H21H22V11H21H19ZM13 18V19V21V22H11V21V19V18H13ZM17.6568 19.0711L18.364 19.7782L19.7782 18.364L19.0711 17.6569L17.6568 16.2427L16.9497 15.5356L15.5355 16.9498L16.2426 17.6569L17.6568 19.0711ZM7.05023 8.46451L6.34312 7.7574L4.92891 6.34319L4.2218 5.63608L5.63602 4.22187L6.34313 4.92897L7.75734 6.34319L8.46445 7.05029L7.05023 8.46451ZM19.0711 6.34309L19.7782 5.63599L18.364 4.22177L17.6568 4.92888L16.2426 6.34309L15.5355 7.0502L16.9497 8.46441L17.6568 7.75731L19.0711 6.34309ZM8.46445 16.9497L7.75734 17.6568L6.34312 19.071L5.63602 19.7781L4.2218 18.3639L4.92891 17.6568L6.34313 16.2426L7.05023 15.5355L8.46445 16.9497ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12ZM12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z"
+                fill="#4B5EFC"
+              />
+            </g>
+          </svg>
+          <!-- moon -->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g opacity="0.7">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.03239 6.23186C6.2001 7.49474 5 9.60797 5 11.9999C5 15.8659 8.13401 18.9999 12 18.9999C14.3918 18.9999 16.5049 17.8 17.7679 15.9678C17.5146 15.9893 17.2585 16.0002 17 16.0002C12.0294 16.0002 8 11.9708 8 7.00019C8 6.7415 8.01094 6.48524 8.03239 6.23186ZM3 11.9999C3 8.04173 5.55459 4.68279 9.10211 3.47693L10.3707 4.74561C10.1306 5.45177 10 6.20969 10 7.00019C10 10.8662 13.134 14.0002 17 14.0002C17.7904 14.0002 18.5482 13.8696 19.2542 13.6296L20.5228 14.8983C19.3168 18.4456 15.958 20.9999 12 20.9999C7.02944 20.9999 3 16.9705 3 11.9999Z"
+                fill="#4B5EFC"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <!-- /THEME -->
+
+      <!-- CALCULATOR -->
       <div class="calculator">
         <div class="calculator__result-window">
           <h2 class="calculator__result-value" data-result-text>0</h2>
@@ -126,6 +168,7 @@
           </li>
         </ul>
       </div>
+      <!-- /CALCULATOR -->
 
       <!-- ALERT TEXT -->
       <div class="alert-text-wrapper hidden" data-alert-text>
@@ -133,11 +176,13 @@
           Kalkulyator manfiy hisob-kitoblarni hisoblay olmaydi
         </h3>
       </div>
+      <!-- /ALERT TEXT -->
     </main>
     <!-- /MAIN CONTENT -->
 
     <!-- SCRIPTS -->
     <script src="js/app.js"></script>
     <script src="js/keyboards.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>
