@@ -50,6 +50,7 @@ elOperatorBtns.forEach((btn) => {
   btn.addEventListener("click", (evt) => {
     const elTarget = evt.target.innerText;
 
+    if (elDisplayText.textContent.includes(elTarget)) return;
     if (
       elDisplayText.textContent.includes("/") ||
       elDisplayText.textContent.includes("×") ||
