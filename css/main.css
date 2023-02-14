@@ -180,7 +180,6 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .theme {
-    top: 5px;
     right: 10px;
   }
 }
