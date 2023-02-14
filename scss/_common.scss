@@ -1,18 +1,32 @@
 /* CUSTOM PROPS */
 :root {
-  --primary-bg-color: #17171c;
-  --text-color: #fff;
-  --element-bg: #d2d3da;
-  --button-color: #2e2f38;
-  --hover-color: #4e505f;
+  --primary-bg-color: linear-gradient(
+    184deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  --text-color: #000;
+  --element-bg: #f1f2f3;
+  --button-color: #fff;
+  --hover-color: #d2d3da;
   --focus-color: #4b5efc;
   --outline-color: #000;
 }
 
 .dark-theme {
-  --primary-bg-color: #d2d3da;
+  --primary-bg-color: linear-gradient(
+    166deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  --text-color: #fff;
   --element-bg: #17171c;
   --outline-color: #fff;
+  --hover-color: #4e505f;
+  --button-color: #2e2f38;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* GLOBAL */
@@ -53,10 +67,11 @@ body {
   line-height: 1.5;
   font-weight: 300;
   color: var(--text-color);
-  background-color: var(--primary-bg-color);
+  background: var(--primary-bg-color);
   display: flex;
   flex-direction: column;
-  transition: background-color .5s ease, color .5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease,
+    linear-gradient 0.5s ease;
 }
 
 /* SCROLL BAR */
@@ -144,9 +159,9 @@ body {
 }
 
 .alert-text {
-  color: #000;
+  color: #fff;
   font-size: 16px;
-  background-color: #9e9494;
+  background-color: #090979;
   padding: 10px;
   border-radius: 5px;
   position: relative;
@@ -155,13 +170,13 @@ body {
     content: "";
     position: absolute;
     border: 30px solid transparent;
-    border-right-color: #9e9494;
+    border-right-color: #090979;
     top: calc(50% - 30px);
     left: -58px;
 
     @media only screen and (max-width: $tablet-l) {
       border-right-color: transparent;
-      border-bottom-color: #9e9494;
+      border-bottom-color: #090979;
       left: calc(50% - 30px);
       top: -58px;
     }

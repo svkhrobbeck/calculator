@@ -18,6 +18,22 @@ elClearBtn.addEventListener("click", () => {
   total = "";
 });
 
+// Dot logic
+elDotBtn.addEventListener("click", (evt) => {
+  const elTarget = elDotBtn.dataset.dot;
+
+  if (elDisplayText.textContent.includes(".")) {
+    return;
+  } else {
+    if (elDisplayText.textContent.includes(operator)) {
+      secondOperand += elTarget;
+    } else if (!elDisplayText.textContent.includes(operator)) {
+      firstOperand += elTarget;
+    }
+    elDisplayText.textContent += elTarget;
+  }
+});
+
 // Operators
 elOperatorBtns.forEach((btn) => {
   btn.addEventListener("click", (evt) => {
