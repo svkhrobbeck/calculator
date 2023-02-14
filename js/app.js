@@ -22,7 +22,7 @@ elClearBtn.addEventListener("click", () => {
 elOperatorBtns.forEach((btn) => {
   btn.addEventListener("click", (evt) => {
     const elTarget = evt.target.innerText;
-    if (elDisplayText.textContent.includes(elTarget)) return;
+
     if (
       elDisplayText.textContent.includes("/") ||
       elDisplayText.textContent.includes("×") ||
@@ -69,18 +69,21 @@ function calcFunc() {
   } else if (operator === "+") {
     total = +firstOperand + +secondOperand;
   }
-  
+
   total = total.toFixed(3);
-  
+
   if (total < 0) {
-   const elAlertText = document.querySelector("[data-alert-text]")
-   elAlertText.classList.remove("hidden")
-   elDisplayText.textContent = +total;
-  return
+    const elAlertText = document.querySelector("[data-alert-text]");
+    elAlertText.classList.remove("hidden");
+    elDisplayText.textContent = +total;
+
+    setTimeout(() => {
+      elAlertText.classList.add("hidden");
+    }, 2000);
+    return;
   }
 
   elDisplayText.textContent = +total;
   firstOperand = +total;
   secondOperand = "";
-
 }
