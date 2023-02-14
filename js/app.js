@@ -109,7 +109,7 @@ function calcFunc() {
 
     setTimeout(() => {
       elAlertText.classList.add("hidden");
-    }, 2000);
+    }, 5000);
     return;
   }
 
@@ -123,6 +123,7 @@ function numErase() {
   if (elDisplayText.textContent.length <= 1) {
     elDisplayText.textContent = "0";
   } else {
+    if (elDisplayText.textContent === "Infinity") return;
     elDisplayText.textContent = elDisplayText.textContent.replace(/.$/, "");
   }
 
