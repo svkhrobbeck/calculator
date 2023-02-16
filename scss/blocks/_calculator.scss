@@ -1,6 +1,6 @@
 /* CALCULATOR */
 .calculator {
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 10px;
   width: 100%;
   background-color: var(--element-bg);
@@ -9,7 +9,11 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 
   @media only screen and (max-width: $mobile) {
-    width: 80%;
+    width: 70%;
+  }
+
+  @media only screen and (max-width: 420px) {
+    width: 75%;
   }
 }
 
@@ -51,16 +55,18 @@
 .calculator__button-list {
   display: flex;
   justify-content: space-between;
-  gap: 35px;
+  gap: 20px;
   flex-wrap: wrap;
   transition: gap 0.5s ease;
 
   @media only screen and (max-width: $mobile) {
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
   }
 
   @media only screen and (max-width: 400px) {
-    gap: 20px;
+    gap: 15px;
+    justify-content: space-between;
   }
 }
 
