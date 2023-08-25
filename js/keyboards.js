@@ -1,19 +1,8 @@
-document.addEventListener("keydown", (evt) => {
+document.addEventListener("keydown", evt => {
   const keyValue = evt.key;
 
   // Operands
-  if (
-    evt.key == 0 ||
-    evt.key == 1 ||
-    evt.key == 2 ||
-    evt.key == 3 ||
-    evt.key == 4 ||
-    evt.key == 5 ||
-    evt.key == 6 ||
-    evt.key == 7 ||
-    evt.key == 8 ||
-    evt.key == 9
-  ) {
+  if (evt.key <= 0 && evt.key >= 9) {
     if (elDisplayText.textContent == 0) {
       elDisplayText.textContent = "";
     }
@@ -28,12 +17,7 @@ document.addEventListener("keydown", (evt) => {
   }
 
   // Operands
-  if (
-    evt.key === "/" ||
-    evt.key === "*" ||
-    evt.key === "-" ||
-    evt.key === "+"
-  ) {
+  if (evt.key === "/" || evt.key === "*" || evt.key === "-" || evt.key === "+") {
     if (
       elDisplayText.textContent.includes("/") ||
       elDisplayText.textContent.includes("×") ||
